@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Content = () => {
 
   return (
     <header class="flexSpaceBetween">
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Content;
