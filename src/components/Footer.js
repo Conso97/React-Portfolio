@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
-          <section class="sectionRow" id="contact-me">
+          <section class="sectionRow" id="contact-me" style={{bottom: 0, position: 'absolute'}}>
             <h3>Contact Me</h3>
             <div class="columnAlignment">
                 <ul>
