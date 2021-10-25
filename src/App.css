@@ -36,3 +36,305 @@
     transform: rotate(360deg);
   }
 }
+
+/* .footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionRow {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 5% 30px 5%;
+}
+
+
+/* Bottom Nav Responsive Styling */
+/* .columnAlignment ul {
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+.columnAlignment ul a {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 8px 2px 8px;
+}
+.columnAlignment li {
+  margin-top: 0;
+  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+} */ 
+
+/* Styling for the portfolio page after reset */
+
+.active {
+  color: blue;
+}
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Variables */
+:root {
+  --darkGrey: #070b0d;
+  --cyan: #4da8ba;
+  --bodyGrey: #151120;
+  --rightSpacing: 5%;
+}
+
+/* Base Element Styling, h1, h2, h3, p, li */
+h1 {
+  font-size: 2.5rem;
+  background-color: var(--cyan);
+  color: var(--darkGrey);
+  padding: 5px 10px 5px 50px;
+}
+h2 {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: var(--cyan);
+  color: var(--darkGrey);
+  padding: 5px;
+  right: var(--rightSpacing);
+  bottom: 20px;
+}
+h3 {
+  font-size: 2rem;
+  border-right: solid var(--bodyGrey);
+  padding: 5px 10px 0 0;
+  color: var(--bodyGrey);
+  text-align: right;
+  margin-right: 20px;
+  display: inline-block;
+  width: 120px;
+}
+h4 {
+  font-size: 1.25rem;
+  color: var(--darkGrey);
+}
+h5 {
+  font-size: .8rem;
+  padding-top: 5px;
+  font-weight: 500;
+  color: var(--darkGrey);
+}
+
+p {
+  color: var(--bodyGrey);
+  margin-bottom: 15px;
+}
+
+li {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+/* Flexbox Classes */
+/* Content is pushed left or right justifications of webpage */
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Justifies main section title h3 and content as a row */
+.sectionRow {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 5% 50px auto;
+}
+
+/* Aligns the vertical lines of the main body sections into a column */
+.columnAlignment {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Top header Styling */
+header {
+  background-color: var(--darkGrey);
+  padding: 15px 0;
+}
+header nav {
+  margin-right: var(--rightSpacing);
+  margin-top: 20px;
+}
+header a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 3px solid;
+  /* margin: 2px; */
+  padding: 0 8px 2px 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* The top background hero image class */
+.hero {
+  height: 450px;
+  width: 100%;
+  background-image: url("./Profile.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Classes for Project Images and Title Card over top of the image */
+/* imageContainer applies the border and is the parent positioning element for project title cards */
+.imageContainer {
+  display: flex;
+  position: relative;
+  width: calc(90% - 5px);
+  box-sizing: border-box;
+  border: 4px solid var(--cyan);
+  margin: 5px 0;
+}
+.imageContainer:first-child {
+  width: 90%;
+}
+
+/* project 1 special image sizing */
+.imageContainer:first-child img {
+  height: 150px;
+}
+
+/* projects image styling */
+.projectImage {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+}
+
+/* Projects title image tags */
+.project-title {
+  position: absolute;
+  bottom: 15px;
+  padding: 5px 10px;
+  background-color: var(--cyan);
+}
+
+/* lowers the opacity of initial image under 100% */
+.imageContainer img {
+  opacity: .4;
+  transition: opacity .5s;
+}
+
+/* Image hover page set */
+.imageContainer img:hover {
+  opacity: 1;
+}
+
+/* styling bottom nav contact me bottom section */
+.columnAlignment ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.columnAlignment ul a {
+  color: var(--bodyGrey);
+  text-decoration: none;
+  border-bottom: 3px solid;
+  padding: 0 8px 2px 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.columnAlignment li {
+  margin: 20px 1% 0 1%;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 850px) {
+  /* Header Responsive Styling */
+  .flexSpaceBetween {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+  }
+  h1 {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      font-size: 2rem;
+  }
+  header nav {
+      margin-right: 0;
+      margin-top: 10px;
+  }
+  header a {
+      font-size: .85rem;
+  }
+
+  /* Hero image Responsive Styling */
+  .hero {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+  }
+  h2 {
+     position: initial;
+     margin-bottom: 5px;
+  }
+
+  /* Main section Responsive Styling */
+  .sectionRow {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 5% 30px 5%;
+  }
+  h3 {
+      width: 100%;
+      border-bottom: solid var(--bodyGrey);
+      border-right: none;
+      padding: 0 0 8px 0;
+      margin-right: 0;
+      margin-bottom: 15px;
+      text-align: left;
+      font-size: 1.5rem;
+  }
+  .columnAlignment {
+      width: 100%;
+      justify-content: center;
+  }
+
+  /* Main project section Responsive Styling */
+  .imageContainer, .imageContainer:first-child {
+      width: 98%;
+  }
+  .imageContainer img, .imageContainer:first-child img {
+      height: 100px;
+      opacity: 1;
+  }
+
+  /* Bottom Nav Responsive Styling */
+  .columnAlignment ul {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 5px;
+  }
+  .columnAlignment ul a {
+      margin: 0;
+      margin-bottom: 10px;
+      padding: 0 8px 2px 8px;
+  }
+  .columnAlignment li {
+      margin-top: 0;
+      margin-bottom: 15px;
+      margin: 0 0 15px 0;
+  }
+}
+
+
